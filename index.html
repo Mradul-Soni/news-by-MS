@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+      <div class="main-nav container flex">
+            <a href="" class="company-logo"><img src="image/newsLogo.jpg" alt=""></a>
+        <div class="nav-links">
+            <ul class="flex">
+                <li class="hover-link nav-item" id="india" onclick="onNavItemClick('india')">India<x/li>
+                <li class="hover-link nav-item" id="technology" onclick="onNavItemClick('technology')">Technology</li>
+                <li class="hover-link nav-item" id="politics" onclick="onNavItemClick('politics')">Politics</li>
+                <li class="hover-link nav-item" id="cricket" onclick="onNavItemClick('cricket')">Cricket</li>
+            </ul>
+        </div>
+        <div class="search-bar">
+            <input type="text" class="news-input" id="search-text" placeholder="Search">
+            <button class="search-button" id="search-button">Search</burrctton>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+        <div class="cards-container container flex" id="cardscontainer">
+         
+        </div>   
+    </main>
+
+    <template id="template-news-card">
+       
+            <div class="card">
+                <div class="card-header">
+                    <img src="data:image/jpeg;base64,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" alt="" id="news-img">
+                </div>
+                <div class="card-content">
+                    <h3 id="news-title">This is the titile</h3>
+                    <h6 class="news-source" id="newssource">020202020202</h6>
+                    <p class="news-desc" id="newsdesc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum assumenda labore ducimus quod, quas repudiandae nihil minima quisquam accusamus eligendi quae eius incidunt. Explicabo distinctio facere nobis eaque itaque tempora.</p>
+                </div>
+            </div>
+
+    </template>
+<script src="script.js" defer></script>
+</body>
+</html>
